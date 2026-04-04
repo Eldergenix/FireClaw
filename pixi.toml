@@ -1,0 +1,23 @@
+[workspace]
+authors = ["Nexis Network <dev@nexis.network>"]
+channels = ["conda-forge", "https://conda.modular.com/max"]
+name = "claw-code-mojo"
+platforms = ["osx-arm64"]
+version = "0.1.0"
+description = "Mojo port of Claw Code — AI coding assistant CLI"
+
+[tasks]
+build = "mojo build packages/claw_cli/main.mojo -o build/claw"
+test = "mojo test packages/"
+format = "mojo format ."
+test-bridge = "python3 -m pytest tests/ -v"
+clean = "rm -rf build/"
+
+[dependencies]
+max = ">=25.3"
+
+[target.osx-arm64.dependencies]
+
+[feature.test.dependencies]
+pytest = ">=8.0"
+httpx = ">=0.27"

@@ -1,0 +1,36 @@
+# Pixi environments
+.pixi/*
+!.pixi/config.toml
+
+# Build artifacts
+build/
+*.o
+*.so
+*.dylib
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+
+# Environment and secrets
+.env
+.env.local
+*.key
+credentials.json
+
+# Session data (local only)
+.claw/sessions/
+
+# OS generated files
+Thumbs.db
+ehthumbs.db
